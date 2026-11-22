@@ -28,10 +28,9 @@ def update_item(inventory, name, qty):
 
 
 def average_price(prices):
-    total = 0
-    for p in prices:
-        total += p
-    return total / len(prices)
+    if not prices:
+        return 0
+    return sum(prices) / len(prices)
 
 
 def load_count(text):
